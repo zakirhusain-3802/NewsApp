@@ -11,3 +11,9 @@ NewsApp is an Android application built using Kotlin that fetches and displays n
  **Retrofit:** For making network requests to the NewsAPI.
  **Glide:** For loading and caching images.
  **ViewModel:** For managing UI-related data in a lifecycle-conscious way.
+
+ ## Apk Installation Link 
+  - [APK Link](https://drive.google.com/file/d/1MNhTdWoVy2OftAdmZF56em0lKFqcPXAN/view?usp=drive_link)
+
+## API Reference
+This app uses the NewsAPI to fetch news articles. For more details, check out the [NewsAPI Documentation.](https://newsapi.org/docs)
