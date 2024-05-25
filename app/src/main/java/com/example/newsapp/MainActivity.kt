@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -78,6 +80,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
         val searchView:SearchView= findViewById(R.id.search_issues)
+        val progressBar:ProgressBar=findViewById(R.id.progressBar)
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -118,6 +121,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         newsViewModel.isLoading.observe(this) { isLoading ->
+            if(isLoading){
+             progressBar.visibility=View.VISIBLE
+                recyclerView.visibility=View.GONE
+            }else{
+                recyclerView.visibility=View.VISIBLE
+                progressBar.visibility=View.GONE
+            }
             // Handle loading state (e.g., show/hide a progress bar)
         }
 

@@ -57,6 +57,12 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="10dp"
         android:id="@+id/topHeadlinesRecyclerView"
